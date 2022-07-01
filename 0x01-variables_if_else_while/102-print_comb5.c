@@ -1,32 +1,32 @@
 #include <stdio.h>
 /**
-*main - Prints all combinations of two two digits with,
-* and space followed by new line
-*
-*Return: returns 0
-*/
+ * main - create 2 pairs of number
+ * Return: 0
+ */
 int main(void)
 {
-	int digit1, digit2;
+	int i, j;
 
-	for (digit1 = 0; digit1 <= 98; digit1++)
+	for (i = 0; i <= 99; i++)
 	{
-	for (digit2 = digit1 + 1; digit2 <= 99; digit2++)
-	{
-	putchar((digit1 / 10) + '0');
-	putchar((digit1 % 10) + '0');
-	putchar(32);
-	putchar((digit2 / 10) + '0');
-	putchar((digit2 % 10) + '0');
+		for (j = i; j <= 99; j++)
+		{
+			if (j != i)
+			{
+				putchar(i / 10 + 48);
+				putchar(i % 10 + 48);
+				putchar(' ');
+				putchar(j / 10 + 48);
+				putchar(j % 10 + 48);
 
-	if (digit1 / 10 != 9 || digit1 % 10 != 8)
-	{
-		putchar(44);
-		putchar(32);
+				if (i * 100 + j != 9899)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
 	}
-	}
-	}
-
+	putchar('\n');
 	return (0);
-
 }
