@@ -3,13 +3,14 @@
 /* printing the alphabet */
 int main(void)
 {
-	char c;
+	int c,n;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (c = 97,n=1; c < 27; c++,n++){
 		putchar(c);
-	for (c = 'A'; c <= 'Z'; c++)
+	}
+	for (c = 65,n=1; c < 27; c++,n++){
 		putchar(c);
+	}
 		putchar('\n');
-
 	return (0);
 }
