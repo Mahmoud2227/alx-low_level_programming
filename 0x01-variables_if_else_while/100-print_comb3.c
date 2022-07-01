@@ -24,7 +24,7 @@ for (ones = tens + 1; ones <= 9; ones++)
 	}
 	}
   }
-  putchar('\n');
 
   return (0);
+
 }
