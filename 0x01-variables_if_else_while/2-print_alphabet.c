@@ -14,5 +14,6 @@ int main(void)
 		letter = tolower(letter);
 		putchar(letter);
 	}
+	putchar(10)
 	return (0);
 }
