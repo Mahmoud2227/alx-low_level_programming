@@ -1,21 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
- *main - entry point
- *
- *Description:prints the alphabet
- *
- *Return: Always 0 (successful)
+ * main - main block
+ * Description: Get a random number and check its last digit, compare it with 5
+ * Return: 0
  */
 int main(void)
 {
-	int letter, n;
+	char c = 'a';
 
-	for (letter = 97, n = 1 ; n < 27; letter++, n++)
+	while (c <= 'z')
 	{
-		putchar(letter);
+		putchar(c);
+		c++;
 	}
+
 	putchar('\n');
 
 	return (0);
-
+	
 }
