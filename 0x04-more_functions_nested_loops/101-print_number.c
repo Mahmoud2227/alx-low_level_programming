@@ -9,27 +9,15 @@
 void print_number(int n)
 {
 	int copy, nth, size = 1, ones = n % 10;
-
-	n /= 10;
-	copy = n;
-	if (ones < 0)
-	{
-		ones *= -1, copy *= -1, n *= -1;
-		_putchar('-');
-	}
-	if (copy > 0)
-	{
-		while (copy / 10 != 0)
-		{
-			copy /= 10, size *= 10;
-		}
-		while (size > 0)
-		{
-			nth = n / size;
-			_putchar('0' + nth);
-			n -= nth * size;
-			size /= 10;
-		}
-	}
-	_putchar('0' + ones);
+unsigned int num = n;
+if (n < 0)
+{
+_putchar('-');
+num = -num;
+}
+if (num > 9)
+{
+print_number(num / 10);
+}
+_putchar(num % 10 + '0');
 }
