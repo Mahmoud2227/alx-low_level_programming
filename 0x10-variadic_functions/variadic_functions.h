@@ -1,19 +1,27 @@
 #ifndef VARFUNC
 #define VARFUNC
+
+#include <stdio.h>
 #include <stdarg.h>
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 /**
- * struct typ - Struct operators
- *
- * @c: Char
- * @tp: The function associated
+ * struct p - checker struct
+ * @p: possibility
+ * @f: Function to be used
  */
-typedef struct typ
+typedef struct p
 {
-	char *c;
-	void (*tp)(va_list var);
-} typ_t;
+  char *p;
+  void (*f)(va_list);
+} checker;
+
+void print_c(va_list);
+void print_i(va_list);
+void print_f(va_list);
+void print_s(va_list);
+
 #endif
